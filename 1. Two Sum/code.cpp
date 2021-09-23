@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<int> twoSum(vector<int>& nums, int target) {
+vector<int> twoSum(const vector<int>& nums, int target) {
     vector<int> res(2);
     for (int i = 0; i < nums.size(); i++){
         for (int j = i + 1; j < nums.size(); j++){
@@ -15,13 +15,15 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return res;
 }
 
-int main() {
-    vector<int> test = {1, 2, 3, 4, 5, 6};
-    int target = 11;
-    const vector<int> result = twoSum(test, target);
-    if (result[0] == 4 && result[1] == 5) {
+void test(const vector<int>& nums, int target, const vector<int>& correctAnswer) {
+    const vector<int> result = twoSum(nums, target);
+    if (result[0] == correctAnswer[0] && result[1] == correctAnswer[1]) {
         cout << "Test passed" << endl;
     } else {
         cout << "Test not passed" << endl;
     }
+}
+
+int main() {
+    test({1, 2, 3, 4, 5, 6}, 11, {4, 5});
 }
