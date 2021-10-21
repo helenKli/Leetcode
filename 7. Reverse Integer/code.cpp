@@ -4,13 +4,12 @@
 #include <climits>
 
 int reverse(int x) {
-    int rev = 0;
+    long long int rev = 0;
     while (x != 0) {
         int y = x % 10;
         x /= 10;
-        if (rev > INT_MAX/10 || (rev == INT_MAX / 10 && y > 7)) return 0;
-        if (rev < INT_MIN/10 || (rev == INT_MIN / 10 && y < -8)) return 0;
         rev = rev * 10 + y;
+        if (rev > INT_MAX || rev < INT_MIN) return 0;
     }
     return rev;
 }
@@ -26,5 +25,6 @@ void test(int x, int correctAnswer) {
 
 int main() {
     test(1234, 4321);
-    test(576285, 582675);
+    test(1123456789, 0);
+    test(-545673, -376545);
 }
