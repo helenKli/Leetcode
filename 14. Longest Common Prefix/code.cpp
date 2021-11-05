@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-std::string longestCommonPrefix(std::vector<std::string>& strs) {
+std::string longestCommonPrefix(const std::vector<std::string>& strs) {
     int n = strs[0].length();
     std::string res = strs[0];
     for (int i = 1; i < strs.size(); i++) {
@@ -28,9 +28,9 @@ std::string longestCommonPrefix(std::vector<std::string>& strs) {
     return res;
 }
 
-void test(std::vector<std::string> str, std::string correctAnswer) {
+void test(const std::vector<std::string> str, const std::string correctAnswer) {
     std::string result = longestCommonPrefix(str);
-    if (result == correctAnswer){
+    if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
     } else {
         std::cout << "Test not passed" << std::endl;

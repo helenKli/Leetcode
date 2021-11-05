@@ -11,35 +11,35 @@ struct ListNode {
  };
 
  ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-    ListNode* Head = nullptr;
+    ListNode* head = nullptr;
     ListNode* step = nullptr;
-    if(l1 == nullptr){
+    if (l1 == nullptr) {
         return l2;
     }
-    if(l2 == nullptr){
+    if (l2 == nullptr) {
         return l1;
     }
-    while(l1 != nullptr || l2 != nullptr){
-        if(step == nullptr){
-            if(l1->val <= l2->val){
-                Head = l1;
+    while (l1 != nullptr || l2 != nullptr) {
+        if (step == nullptr) {
+            if (l1->val <= l2->val) {
+                head = l1;
                 step = l1;
                 l1 = l1->next;
             } else {
-                Head = l2;
+                head = l2;
                 step = l2;
                 l2 = l2->next;
             }
         }
-        if (l1 == nullptr){
+        if (l1 == nullptr) {
             step->next = l2; 
-            return Head;
+            return head;
         }
-        if (l2 == nullptr){
+        if (l2 == nullptr) {
             step->next = l1; 
-            return Head;
+            return head;
         }
-        if(l1->val <= l2->val){
+        if (l1->val <= l2->val) {
             step->next = l1;
             step = step->next;
             l1 = l1->next;
@@ -49,7 +49,7 @@ struct ListNode {
             l2 = l2->next;
         }
     }
-    return Head;
+    return head;
 }
 
 void test(ListNode* l1, ListNode* l2, ListNode* correctAnswer) {
@@ -67,11 +67,6 @@ void test(ListNode* l1, ListNode* l2, ListNode* correctAnswer) {
     } else {
         std::cout << "Test passed" << std::endl;
     }
-    /*if (result == correctAnswer){
-        std::cout << "Test passed" << std::endl;
-    } else {
-        std::cout << "Test not passed" << std::endl;
-    }*/
 }
 
 int main() {

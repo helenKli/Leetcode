@@ -5,7 +5,7 @@
  int romanToInt(std::string s) {
     int sum = 0;
     for (int i = 0; i <= s.length(); i++) {
-        if(s[i] == 'M') {
+        if (s[i] == 'M') {
             sum += 1000;
         }
         if (s[i] == 'D') {
@@ -15,7 +15,7 @@
             if (s[i+1] == 'M') {
                 i++;
                 sum += 900;
-            }   else if(s[i+1] == 'D') {
+            }   else if (s[i+1] == 'D') {
                 i++;
                 sum += 400;
             }   else {
@@ -32,7 +32,9 @@
             }   else if (s[i+1] == 'L') {
                     i++;
                     sum += 40;
-                }   else sum += 10;
+                }   else {
+                        sum += 10;
+                    }   
         }
         if (s[i] == 'V') {
             sum += 5;
@@ -44,19 +46,20 @@
             }   else if (s[i+1] == 'V') {
                     i++;
                     sum += 4;
-                }
-                else sum += 1;
+                }   else { 
+                        sum += 1;
+                    }
         }
     }
     return sum;
 }
 
-void test(std::string str, int correctAnswer) {
+void test(const std::string str, int correctAnswer) {
     int result = romanToInt(str);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
     } else {
-        std::cout << "Test not passe" << std::endl;
+        std::cout << "Test not passed" << std::endl;
     }
 }
 
