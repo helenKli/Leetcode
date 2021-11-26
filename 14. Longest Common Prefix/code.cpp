@@ -28,7 +28,7 @@ std::string longestCommonPrefix(const std::vector<std::string>& strs) {
     return res;
 }
 
-void test(const std::vector<std::string> str, const std::string correctAnswer) {
+void test(const std::vector<std::string>& str, const std::string& correctAnswer) {
     std::string result = longestCommonPrefix(str);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
