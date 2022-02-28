@@ -29,8 +29,8 @@ void test(std::vector<int>& nums, const int& correctAnswer) {
 }
 
 int main() {
-    std::vector<int> nums1 = {0,0,1,1,1,2,2,3,3,4};
-    std::vector<int> nums2 = {0,1,2,3,4,5,6};
+    std::vector<int> nums1 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+    std::vector<int> nums2 = {0, 1, 2, 3, 4, 5, 6};
     test(nums1, 5);
     test(nums2, 7);
 }
