@@ -6,14 +6,14 @@
 void merge(std::vector<int>& nums1, const int& m, std::vector<int>& nums2, const int& n) {
     int i = 0;
     int j = 0;
-    if (m == 0){
+    if (m == 0) {
         nums1 = nums2;
     } else {
         while (j < n && i <= m) {
             if (i == m){
                 nums1[m + n -1 - i - j] = nums2[n - 1 - j];
                 j++;
-            } else if (nums1[m - 1 - i] > nums2[n - 1 - j]){
+            } else if (nums1[m - 1 - i] > nums2[n - 1 - j]) {
                 nums1[m + n - 1 - i - j] = nums1[m - 1 - i];
                 i++;
             } else {
