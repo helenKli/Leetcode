@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-std::string addBinary(std::string a, std::string b) {
+std::string addBinary(std::string& a, std::string& b) {
     std::string res = "";
     int step = 0;
     while (!a.empty() && !b.empty()) {
@@ -75,4 +75,5 @@ int main() {
     std::string s3 = "101", s4 = "";
     test(s1, s2, "11100");
     test(s3, s4, "101");
+    return 0;
 }

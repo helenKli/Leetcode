@@ -34,7 +34,7 @@ bool isSameTree(TreeNode* p, TreeNode* q) {
     return true;
 }
 
-void test(TreeNode* root1, TreeNode* root2, const bool& correctAnswer) {
+void test(TreeNode* root1, TreeNode* root2, bool correctAnswer) {
     bool result = isSameTree(root1, root2);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -61,4 +61,5 @@ int main() {
     TreeNode w1(1, &w2, &w3);
     test(&t1, &r1, true);
     test(&t1, &w1, false);
+    return 0;
 }

@@ -40,4 +40,5 @@ void test(const std::vector<std::string>& str, const std::string& correctAnswer)
 int main() {
     test({"flower","flow","flight"}, "fl");
     test({"dog","racecar","car"}, "");
+    return 0;
 }

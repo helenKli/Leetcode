@@ -24,8 +24,8 @@ int searchInsert(const std::vector<int>& nums, int target) {
     }
 }
 
-void test(const std::vector<int>& nums, const int target, const int& correctAnswer) {
-    const int result = searchInsert(nums, target);
+void test(const std::vector<int>& nums, int target, int correctAnswer) {
+    int result = searchInsert(nums, target);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
     } else {
@@ -36,4 +36,5 @@ void test(const std::vector<int>& nums, const int target, const int& correctAnsw
 int main() {
     test({1, 4, 8, 12, 16, 23, 28, 29, 33, 39, 43}, 25, 6);
     test({-14, -12, -7, -4, -2, -1, 1, 2}, 3, 8);
+    return 0;
 }

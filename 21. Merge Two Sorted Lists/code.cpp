@@ -70,17 +70,18 @@ void test(ListNode* l1, ListNode* l2, ListNode* correctAnswer) {
 }
 
 int main() {
-    ListNode a3(4); ListNode* a2 = &a3;
-    ListNode a1(2, a2); ListNode* a0 = &a1;
-    ListNode a(1, a0); ListNode* A = &a;
-    ListNode b3(4); ListNode* b2 = &b3;
-    ListNode b1(3, b2); ListNode* b0 = &b1;
-    ListNode b(1, b0); ListNode* B = &b;
-    ListNode c9(4); ListNode* c8 = &c9;
-    ListNode c7(4, c8); ListNode* c6 = &c7;
-    ListNode c5(3, c6); ListNode* c4 = &c5;
-    ListNode c3(2, c4); ListNode* c2 = &c3;
-    ListNode c1(1, c2); ListNode* c0 = &c1;
-    ListNode c(1, c0); ListNode* C = &c;
-    test(A, B, C);
+    ListNode a2(4);
+    ListNode a1(2, &a2);
+    ListNode a(1, &a1);
+    ListNode b2(4);
+    ListNode b1(3, &b2);
+    ListNode b(1, &b1); 
+    ListNode c5(4);
+    ListNode c4(4, &c5);
+    ListNode c3(3, &c4);
+    ListNode c2(2, &c3);
+    ListNode c1(1, &c2);
+    ListNode c(1, &c1);
+    test(&a, &b, &c);
+    return 0;
 }

@@ -31,4 +31,5 @@ int main() {
     test(1234321, 1);
     test(65284, 0);
     test(10, 0);
+    return 0;
 }

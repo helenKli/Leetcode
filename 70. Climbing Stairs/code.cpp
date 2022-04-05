@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int climbStairs(const int& n) {
+int climbStairs(int n) {
     if (n == 1) {
         return n;
     }
@@ -15,7 +15,7 @@ int climbStairs(const int& n) {
     return count[n - 1];
 }
 
-void test(const int& val, const int& correctAnswer) {
+void test(int val, int correctAnswer) {
     int result = climbStairs(val);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -27,4 +27,5 @@ void test(const int& val, const int& correctAnswer) {
 int main() {
     test(10, 89);
     test(25, 121393);
+    return 0;
 }

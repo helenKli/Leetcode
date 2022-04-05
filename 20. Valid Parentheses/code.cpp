@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stack>
 
-bool isValid(const std::string s) {
+bool isValid(const std::string& s) {
     std::stack <char> steck;
     for (int i = 0; i < s.length(); i++) {
         if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
@@ -23,7 +23,7 @@ bool isValid(const std::string s) {
     return steck.empty();
 }
 
-void test(const std::string str, bool correctAnswer){
+void test(const std::string& str, bool correctAnswer) {
     bool result = isValid(str);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -36,4 +36,5 @@ int main() {
     test("()[]{}", 1);
     test("([)]", 0);
     test("{[]}", 1);
+    return 0;
 }

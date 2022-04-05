@@ -3,14 +3,14 @@
 #include <iostream>
 #include <vector>
 
-void merge(std::vector<int>& nums1, const int& m, std::vector<int>& nums2, const int& n) {
+void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n) {
     int i = 0;
     int j = 0;
     if (m == 0) {
         nums1 = nums2;
     } else {
         while (j < n && i <= m) {
-            if (i == m){
+            if (i == m) {
                 nums1[m + n -1 - i - j] = nums2[n - 1 - j];
                 j++;
             } else if (nums1[m - 1 - i] > nums2[n - 1 - j]) {
@@ -24,7 +24,7 @@ void merge(std::vector<int>& nums1, const int& m, std::vector<int>& nums2, const
     }
 }
 
-void test(std::vector<int>& v1, const int& n1, std::vector<int>& v2, const int& n2, const std::vector<int>& correctAnswer) {
+void test(std::vector<int>& v1, int n1, std::vector<int>& v2, int n2, const std::vector<int>& correctAnswer) {
     merge(v1, n1, v2, n2);
     if (v1 == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -40,4 +40,5 @@ int main() {
     std::vector<int> nums4 = {};
     test(nums1, 6, nums2, 5, {1, 2, 3, 4, 4, 6, 6, 7, 7, 8, 11});
     test(nums3, 1, nums4, 0, {1});
+    return 0;
 }

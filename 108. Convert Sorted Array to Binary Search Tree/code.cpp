@@ -30,7 +30,7 @@ TreeNode* sortedArrayToBST(const std::vector<int>& nums) {
     for (int i = 0; i < mid; i++) {
         nums_left[i] = nums[i];
     }
-    for (int i = 0; i < nums_right.size(); i++){
+    for (int i = 0; i < nums_right.size(); i++) {
         nums_right[i] = nums[mid + 1 + i];
     }
     node->left = sortedArrayToBST(nums_left);
@@ -78,4 +78,5 @@ int main() {
     TreeNode q1(4, &q2, &q3);
     test({-10, -5, 3, 6, 7, 9}, &t1);
     test({2, 4, 7}, &q1);
+    return 0;
 }

@@ -55,4 +55,5 @@ int main() {
     ListNode c2(3, &c3);
     ListNode c1(1, &c2);
     test(&a1, &c1);
+    return 0;
 }

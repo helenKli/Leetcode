@@ -60,4 +60,5 @@ int main() {
     TreeNode a(1, nullptr, &a2);
     test(&t, {2, 7, 6, 1, 13, 9});
     test(&a, {1, 3, 2});
+    return 0;
 }

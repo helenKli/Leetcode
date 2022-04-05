@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int lengthOfLastWord(const std::string s) {
+int lengthOfLastWord(const std::string& s) {
     int l = 0;
     int end = s.length() - 1;
     while (s[end] == ' ') {
@@ -19,8 +19,8 @@ int lengthOfLastWord(const std::string s) {
     return l;
 }
 
-void test(const std::string& str, const int& correctAnswer) {
-    const int result = lengthOfLastWord(str);
+void test(const std::string& str, int correctAnswer) {
+    int result = lengthOfLastWord(str);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
     } else {
@@ -31,5 +31,5 @@ void test(const std::string& str, const int& correctAnswer) {
 int main() {
     test("luffy is still joyboy", 6);
     test("   fly me   to   the moon  ", 4);
+    return 0;
 }
-

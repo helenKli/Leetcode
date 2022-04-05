@@ -2,7 +2,7 @@
 
 #include <iostream>
 
- int romanToInt(std::string s) {
+ int romanToInt(const std::string& s) {
     int sum = 0;
     for (int i = 0; i <= s.length(); i++) {
         if (s[i] == 'M') {
@@ -54,7 +54,7 @@
     return sum;
 }
 
-void test(const std::string str, int correctAnswer) {
+void test(const std::string& str, int correctAnswer) {
     int result = romanToInt(str);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -66,4 +66,5 @@ void test(const std::string str, int correctAnswer) {
 int main () {
     test("LVIII", 58);
     test("MCMXCIV", 1994);
+    return 0;
 }

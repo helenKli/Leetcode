@@ -32,4 +32,5 @@ int main() {
     std::vector<int> nums2 = {1, 9, 2, 9, 9};
     test(nums1, {1, 0, 2, 5, 0});
     test(nums2, {1, 9, 3, 0, 0});
+    return 0;
 }

@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int mySqrt(const int& x) {
+int mySqrt(int x) {
     if (x <= 1) {
         return x;
     }
@@ -26,7 +26,7 @@ int mySqrt(const int& x) {
     }
 }
 
-void test(const int& val, const int& correctAnswer) {
+void test(int val, int correctAnswer) {
     int result = mySqrt(val);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -38,4 +38,5 @@ void test(const int& val, const int& correctAnswer) {
 int main() {
     test(8, 2);
     test(1234567, 1111);
+    return 0;
 }

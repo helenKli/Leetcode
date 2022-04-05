@@ -36,7 +36,7 @@ bool isSymmetric(TreeNode* root) {
     return true;
 }
 
-void test(TreeNode* root, const bool& correctAnswer) {
+void test(TreeNode* root, bool correctAnswer) {
     bool result = isSymmetric(root);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -59,4 +59,5 @@ int main() {
     TreeNode q1(11, &q2, &q3);
     test(&t1, false);
     test(&q1, true);
+    return 0;
 }

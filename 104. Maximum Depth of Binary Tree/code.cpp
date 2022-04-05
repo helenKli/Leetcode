@@ -1,7 +1,6 @@
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 #include <iostream>
-#include <stack>
 
 struct TreeNode {
     int val;
@@ -20,7 +19,7 @@ int maxDepth(TreeNode* root) {
     }
 }
 
-void test(TreeNode* root, const int& correctAnswer) {
+void test(TreeNode* root, int correctAnswer) {
     int result = maxDepth(root);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
@@ -43,4 +42,5 @@ int main() {
     TreeNode q1(11, &q2, &q3);
     test(&t1, 3);
     test(&q1, 4);
+    return 0;
 }

@@ -14,8 +14,8 @@ int removeElement(std::vector<int>& nums, int val) {
     return count;
 }
 
-void test(std::vector<int>& nums, const int target, const int& correctAnswer) {
-    const int result = removeElement(nums, target);
+void test(std::vector<int>& nums, int target, int correctAnswer) {
+    int result = removeElement(nums, target);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
     } else {
@@ -28,4 +28,6 @@ int main() {
     std::vector<int> nums2 = {1, 2, 7, 4, 3, 3, 7, 2, 8, 3, 13};
     test(nums1, 2, 5);
     test(nums2, 3, 8);
+    return 0;
 }
+
