@@ -1,4 +1,4 @@
-//
+//https://leetcode.com/problems/path-sum/
 
 #include <iostream>
 
@@ -49,4 +49,5 @@ int main() {
     TreeNode t1(5, &t2, &t3);
     test(&t1, 22, true);
     test(&t1, 17, false);
+    return 0;
 }
