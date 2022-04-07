@@ -19,7 +19,7 @@ int removeDuplicates(std::vector<int>& nums) {
     return count;
 }
 
-void test(std::vector<int>& nums, const int& correctAnswer) {
+void test(std::vector<int>& nums, int correctAnswer) {
     int result = removeDuplicates(nums);
     if (result != correctAnswer ) {
         std::cout << "Test not passed" << std::endl;

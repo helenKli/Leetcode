@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-std::string addBinary(std::string& a, std::string& b) {
+std::string addBinary(std::string a, std::string b) {
     std::string res = "";
     int step = 0;
     while (!a.empty() && !b.empty()) {
@@ -61,7 +61,7 @@ std::string addBinary(std::string& a, std::string& b) {
     return res;
 }
 
-void test(std::string& str1, std::string& str2, const std::string& correctAnswer) {
+void test(const std::string& str1, const std::string& str2, const std::string& correctAnswer) {
     std::string result = addBinary(str1, str2);
     if (result == correctAnswer) {
         std::cout << "Test passed" << std::endl;
